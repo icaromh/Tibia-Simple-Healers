@@ -11,7 +11,7 @@ class getPixelsInImage():
         red = 0
 
         for pixel in im.getdata():
-            if pixel == (241, 97, 97):
+            if pixel == (219, 79, 79):
                 red += 1
         
         if red > 0:
@@ -24,7 +24,7 @@ class getPixelsInImage():
         blue = 0
 
         for pixel in im.getdata():
-            if pixel == (82, 79, 211):
+            if pixel == (83, 80, 218):
                 blue += 1
         
         if blue > 0:
