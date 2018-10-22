@@ -26,6 +26,7 @@ def getTibiaActive():
 '''
 def checkImgToCapture(img, save):
     pos = pyautogui.locateCenterOnScreen('Picture/'+ img +'.png')
+    print(pos)
     a = ImageGrab.grab(bbox=(pos[0]-45, pos[1]-5, pos[0]+45, pos[1]+6))
     a.save('Healing/'+ save +'.png')
 
