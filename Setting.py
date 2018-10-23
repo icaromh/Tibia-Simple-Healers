@@ -24,10 +24,13 @@ def getTibiaActive():
     Ex: capture('manaFull', 'manaAtual')
     return void
 '''
-def checkImgToCapture(img, save):
-    pos = pyautogui.locateCenterOnScreen('Picture/'+ img +'.png')
-    a = ImageGrab.grab(bbox=(pos[0]-1, pos[1]-5, pos[0]+93, pos[1]+6))
-    a.save('Healing/'+ save +'.png')
+def checkImgToCapture(img, save, Version):
+    pos = pyautogui.locateCenterOnScreen('Picture/'+Version+'/'+ img +'.png')
+    if Version == 'RL':
+        a = ImageGrab.grab(bbox=(pos[0]-1, pos[1]-5, pos[0]+93, pos[1]+6))
+    elif Version == 'OT':
+        a = ImageGrab.grab(bbox=(pos[0]-1, pos[1]-5, pos[0]+89, pos[1]+6))
+    a.save('Healing/'+Version+'/'+ save +'.png')
 
 '''
     Retorna porcentagem sobre os pixels
